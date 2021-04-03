@@ -6,10 +6,53 @@ import { PointLight, PointLightHelper } from 'three';
 
 // Debug
 const gui = new dat.GUI();
+gui.close();
+
+const colorCombos = {
+  combo1: {
+    color1: '0xfa087d',
+    color2: '0xd44f7',
+  },
+  combo2: {
+    color1: '0x6cc527',
+    color2: '0xf7cd0d',
+  },
+  combo3: {
+    color1: '0xd42a2a',
+    color2: '0xdf7bf',
+  },
+  combo4: {
+    color1: '0xbee815',
+    color2: '0x7e1ded',
+  },
+  combo5: {
+    color1: '0x15e8e8',
+    color2: '0xed8a1c',
+  },
+  combo6: {
+    color1: '0x153ae8',
+    color2: '0x1ced59',
+  },
+  combo7: {
+    color1: '0xe81515',
+    color2: '0xeda31c',
+  },
+};
+
+const pickRandomColors = (obj) => {
+  const keys = Object.keys(obj);
+  return obj[keys[(keys.length * Math.random()) << 0]];
+};
+
+const randomCombo = pickRandomColors(colorCombos);
+console.log(randomCombo);
+
+const randomColor1 = parseInt(randomCombo.color1);
+const randomColor2 = parseInt(randomCombo.color2);
 
 const parameters = {
-  light2Color: 0xfa087d,
-  light3Color: 0xd44f7,
+  light2Color: randomColor1,
+  light3Color: randomColor2,
 };
 
 // Loaders

@@ -11,11 +11,77 @@ body {
 
 body {
   background-color: hsl(0, 0%, 9%);
+  color: hsl(0, 0%, 80%);
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 .webgl {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   outline: none;
+  mix-blend-mode: difference;
+}
+
+.container {
+  height: 95vh;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-size: calc(7rem + 4vw);
+  line-height: 1;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: -0.015em;
+}
+
+h1 > span {
+  display: block;
+}
+
+h1 .part1 {
+  margin-left: -0.91ch;
+}
+
+h1 .part2 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+  color: transparent;
+}
+
+h1 .part2::after {
+  content: '–';
+}
+
+h1 .part3 {
+  position: relative;
+  transform: translateX(2.82ch);
+}
+
+h1 .part3::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: -2.75ch;
+  width: 2.4ch;
+  height: 0.146em;
+  background-color: white;
+}
+
+main {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 1rem 3rem 4rem;
+  font-size: calc(1rem + 0.3vw);
+  font-weight: normal;
+}
+
+p:not(:last-child) {
+  margin-bottom: 2rem;
 }
