@@ -58,7 +58,7 @@ const parameters = {
 // Loaders
 const textureLoader = new THREE.TextureLoader();
 const normalTexture = textureLoader.load(
-  './textures/GolfBall/GolfBall-NormalMap.jpeg'
+  'textures/GolfBall/GolfBall-NormalMap.jpeg'
 );
 
 // Canvas
