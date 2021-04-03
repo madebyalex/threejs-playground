@@ -77,10 +77,11 @@ h1 .part3::before {
 main {
   max-width: 64rem;
   margin: 0 auto;
-  padding: 1rem 3rem 4rem;
+  padding: 0 3rem 4rem;
   font-size: calc(1rem + 0.3vw);
   font-weight: normal;
   display: grid;
+  gap: 1rem;
   grid-template-columns: 20rem 1fr;
 }
 
@@ -93,7 +94,6 @@ p {
 p:first-child {
   font-size: 1.25em;
   grid-column: 1 / -1;
-  padding-bottom: 1em;
 }
 
 p:nth-child(2) {
@@ -108,13 +108,16 @@ p:nth-child(2) {
 }
 
 p:not(:last-child) {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 45rem) {
+  h1 {
+    font-size: calc(5rem + 3vw);
+  }
   main {
     margin: 0 auto;
-    padding: 1rem 3rem 4rem;
+    padding: 1rem 1.6rem 4rem;
     font-size: calc(1rem + 0.3vw);
     font-weight: normal;
     display: grid;
@@ -123,5 +126,11 @@ p:not(:last-child) {
 
   p {
     grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 28rem) {
+  h1 {
+    font-size: calc(4rem + 3vw);
   }
 }
