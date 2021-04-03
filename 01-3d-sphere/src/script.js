@@ -203,6 +203,17 @@ window.addEventListener('resize', () => {
 });
 
 /**
+ * Scroll effects
+ */
+
+const updateSphere = (e) => {
+  sphere.position.y = -window.scrollY * 0.0007;
+  // sphere.scale = window.scrollY * 0.01;
+};
+
+window.addEventListener('scroll', updateSphere);
+
+/**
  * Camera
  */
 // Base camera
@@ -268,7 +279,7 @@ const tick = () => {
 
   sphere.rotation.x += (targetY - sphere.rotation.x) * 0.5;
   sphere.rotation.y += (targetX - sphere.rotation.y) * 0.3;
-  sphere.rotation.z += (targetY - sphere.rotation.x) * 0.05;
+  sphere.position.z += (targetY - sphere.rotation.x) * 0.4;
 
   // Update Orbital Controls
   // controls.update()
