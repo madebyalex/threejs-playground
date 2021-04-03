@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: 'Poppins';
+}
+
+body {
+  background-color: hsl(0, 0%, 9%);
+  color: hsl(0, 0%, 86%);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: none;
+  mix-blend-mode: difference;
+}
+
+.container {
+  height: 95vh;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-size: calc(7rem + 4vw);
+  line-height: 1;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: -0.015em;
+}
+
+h1 > span {
+  display: block;
+}
+
+h1 .part1 {
+  margin-left: -0.91ch;
+}
+
+h1 .part2 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+  color: transparent;
+}
+
+h1 .part2::after {
+  content: '–';
+}
+
+h1 .part3 {
+  position: relative;
+  transform: translateX(2.82ch);
+}
+
+h1 .part3::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: -2.75ch;
+  width: 2.4ch;
+  height: 0.146em;
+  background-color: white;
+}
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 3rem 4rem;
+  font-size: calc(1rem + 0.3vw);
+  font-weight: normal;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 20rem 1fr;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  grid-column: 2 / -1;
+}
+
+p:first-child {
+  font-size: 1.25em;
+  grid-column: 1 / -1;
+}
+
+p:nth-child(2) {
+  font-size: 0.8em;
+  line-height: 1.7;
+  grid-column: 1 / 2;
+  padding: 0 2em;
+  color: hsl(0, 0%, 90%);
+  font-style: italic;
+  border-left: 4px solid hsl(0, 0%, 30%);
+  align-self: flex-start;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 45rem) {
+  h1 {
+    font-size: calc(5rem + 3vw);
+  }
+  main {
+    margin: 0 auto;
+    padding: 1rem 1.6rem 4rem;
+    font-size: calc(1rem + 0.3vw);
+    font-weight: normal;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  p {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 28rem) {
+  h1 {
+    font-size: calc(4rem + 3vw);
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map*/
