@@ -1,6 +1,6 @@
 import './style.css';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as dat from 'dat.gui';
 import { PointLight, PointLightHelper } from 'three';
 
@@ -58,7 +58,7 @@ const parameters = {
 // Loaders
 const textureLoader = new THREE.TextureLoader();
 const normalTexture = textureLoader.load(
-  '/textures/GolfBall/GolfBall-NormalMap.jpeg'
+  './textures/GolfBall/GolfBall-NormalMap.jpeg'
 );
 
 // Canvas
