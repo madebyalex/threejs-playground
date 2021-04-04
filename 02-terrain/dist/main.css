@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Rubik:wght@300;700&display=swap');
-
+@import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Rubik:wght@300;700&display=swap);
 :root {
   --font-headline: 'Dela Gothic One', sans-serif;
   --font-body: 'Rubik', sans-serif;
@@ -91,3 +90,6 @@ button.with-arrow::after {
 button.with-arrow:hover::after {
   transform: translateX(4px);
 }
+
+
+/*# sourceMappingURL=main.css.map*/

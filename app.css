@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;800&display=swap');
+
+:root {
+  /* --font-headline: 'Dela Gothic One', sans-serif; */
+  --font-body: 'Poppins', sans-serif;
+  --color-primary: #2085e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: 'Poppins';
+}
+
+body {
+  background-color: hsl(240, 7%, 8%);
+  line-height: 1.45;
+  font-family: var(--font-body);
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.container {
+  display: grid;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+  grid-template-columns: 1fr 2fr auto 1fr;
+  grid-gap: 2rem;
+}
+
+header {
+  color: hsla(231, 64%, 98%, 0.671);
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+header a svg {
+  margin-right: 0.5rem;
+}
+
+h1 {
+  grid-column: 1 / span 2;
+  font-size: calc(3.5rem + 2vw);
+  line-height: 1;
+  margin: 0.8em 0;
+}
+
+h1 span {
+  display: block;
+}
+
+h1 .part1 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+  color: transparent;
+}
+
+.cards {
+  grid-column: 2 / -1;
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.card {
+  background-color: hsla(240, 33%, 96%, 0.06);
+  color: hsl(238, 72%, 93%);
+  transition: background-color 0.24s ease-out;
+  will-change: background-color;
+}
+
+.card:hover {
+  background-color: hsla(240, 33%, 96%, 0.09);
+}
+
+.card a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem 2rem 2rem;
+  display: grid;
+  align-items: flex-end;
+  min-height: 10rem;
+  font-size: 1.2rem;
+}
+
+.card__number {
+  align-self: flex-start;
+  text-align: right;
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0.16;
+}
